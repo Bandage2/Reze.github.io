@@ -1,0 +1,215 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https:/resources/demos/style.css">
+      
+         <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" type="text/css" href="style.css">
+
+       <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+        	<div class="arbeitsanweisung-content-top-section">
+<!--***************** Rezeptur ***********************-->
+
+        		<div class="top-row first-row"> 
+        			<div class="row-input">
+                <label class="rezeptur">Rezeptur</label>
+                   <input placeholder="" id="rezeptur" type="text" value="115g Apfel 1 Joghurt">
+              </div>	
+
+        			<div class="row-input">
+        				<label class="rezeptur">PLU</label>
+        			     <input placeholder="" id="rezeptur" type="text" value="0000">
+        			</div>	
+        		</div>
+
+<!--***************** Rezeptur ***********************-->
+       <!-- *********************detail-td************************** -->
+
+
+            <div class="top-row detail-row">
+              <p class="detail-td">
+                <span>Produktionsmenge:</span>
+                <span>1</span>
+                <span><img src="img/1.png"></span>
+              </p>
+              <p class="detail-td">
+                <span>Lagerung:</span>
+                <span><input class="lagerung-input" type="text" placeholder="4"></span>
+                <span>°C</span>
+              </p>
+
+              <p class="detail-td">
+                <span>Haltbarkeit:</span>
+                <span><input class="inputdate" type="text" id="datepicker" ></span>
+              </p>
+
+              <p class="detail-td">
+                <span>Produktionstag:</span>
+                <span><input class="inputdate" type="text" id="datepicker2"></span>
+              </p>
+            </div>
+       <!-- *********************detail-td************************** -->
+
+       <!-- *********************Header-row************************** -->
+            <div class="header-row">
+              <label class="row-heading">Zubereitung</label>
+            </div>
+       <!-- *********************Header-row************************** -->
+       <!-- *********************Notwendiges Gerät:************************** -->
+            <div class="top-row gerate">
+              <label for="notwendiges_gerat" class="row-heading-secondary">Notwendiges Gerät:</label>
+              <span><input type="text" placeholder="Waage. Räucherofen" class="notwendiges-gerat-input"></span>
+            </div>
+
+            <div class="top-row gerate">
+              <label for="notwendiges_gerat" class="row-heading-secondary">Notwendige Utensilien:</label>
+              <span><input type="text" placeholder="Wanne, Litermaß, Rührbesen, Forellenhaken zum Räuchern" class="notwendiges-gerat-input"></span>
+            </div>
+       <!-- *********************Notwendiges Gerät:************************** -->
+
+       <!-- *********************First Table:************************** -->
+            <div class="table-head-section">
+              <table class="table-head">
+                <tbody>
+                  <tr>
+                    <th class="menge-th">Menge</th>
+                    <th class="zutaten-th">Zutaten</th>
+                    <th class="mise-th">mise en place</th>
+                    <th class="schritt-th">Schritt für Schritt
+                      <span class="instruction_add tooltipped" data-tooltip="Anleitung Hinzufügen" data-position="bottom">
+                        <i class="material-icons" onclick="create_tr('tbody')">add</i>
+                      </span>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="main-content">
+                <tbody id="sortable">
+                   <tr class="ui-state-default">
+                    <td class="dragbble-td"><img src="img/2.png"></td>
+                    <td class="menge menge-td">
+                      <span>150,0</span>
+                    </td>
+                    <td class="zutaten-td" style="height: 19px;">Joghurt natur (fettarm)</td>
+                    <td class="mise-td" style="height: 19px;">
+                       <input type="text" class="mise-td-input" value="Küchenfertig (ohne Kiemen)"> 
+                    </td>
+                  </tr>
+
+                  <tr class="ui-state-default">
+                    <td class="dragbble-td"><img src="img/2.png"></td>
+                    <td class="menge menge-td">
+                      <span>150,0</span>
+                    </td>
+                    <td class="zutaten-td" style="height: 19px;">Apfel</td>
+                    <td class="mise-td" style="height: 19px;">
+                       <input type="text" class="mise-td-input" value="Küchenfertig (ohne Kiemen)"> 
+                    </td>
+
+                  </tr>
+                  <!-- <tr class="ui-state-default">
+                  <td class="dragbble-td"><img src="img/2.png" width="5" height="8" ></td>
+                   <td  class="menge menge-td">150,0</td>
+                   <td class="zutaten-td" style="height: 19px;">Joghurt natur (fettarm)</td>
+                   <td class="mise-td" style="height: 19px;">
+                    <input type="text" placeholder="In kleine Stücke geschnitten" class="mise-td-input" height="13"></td>
+                </tr>
+                 <tr class="ui-state-default">
+                  <td class="dragbble-td"><img src="img/2.png" width="5" height="8" ></td>
+                   <td class="menge menge-td">115,0</td>
+                   <td>Apfel</td>
+                   <td class="mise-td" style="height: 19px;">
+                    <input type="text"  class="mise-td-input" placeholder="In kleine Stücke geschnitten" height="13"></td>
+                   
+                </tr> -->
+                </tbody>
+              </table>
+
+              <table class="side-content">
+                <tbody id="tbody">
+                  <tr id="resizable" class="ui-widget-content resizes" onmouseenter="resizes(this)">
+                    <td class="ui-widget-header afterbox">
+                         <textarea class=" ui-widget-header inputbox" placeholder="Die ausgenommenen Forellen gründlich"></textarea>
+                         <i class="material-icons clear" onclick="remove_tr(this)">clear</i>
+                    </td>
+                    <td class="ui-widget-header char_data">0/1000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+              
+             <div style="clear: both;"></div>
+            
+        	</div>
+        </div>
+
+
+       <div class="container">
+          <div class="arbeitsanweisung-des">
+              <h2>Bemerkung</h2>
+              <textarea class="Bemerkungbox-input" placeholder="Folgende Verwendung:a. Sofortbedarf - Die gereiften Forellen nach Bedarf in Thekengeschirr geben und in der Theke platzieren. Wochenvorrat - Die abgekühlten Forellen portioniert in Vakuumbeutel verteilen, verschweißen und beschriften. Zu verbrauchen innerhalb von 14 Tagen.Die Produktionsmenge richtet sich nach dem Bedarf. Um Frische zu garantieren, sollte eine Überproduktion vermieden werden."></textarea>
+            </div>
+       </div>
+      <!--JavaScript at end of body for optimized loading-->
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script>
+   $( function() {
+    $( "#sortable" ).sortable();
+  } );
+
+ $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+ 
+  $( function() {
+    $( "#datepicker2" ).datepicker();
+  } );
+ 
+
+
+function create_tr(tableId){
+
+  let db = '<tr id="resizable" class="ui-widget-content resizes" onmouseenter="resizes(this)"><td class="ui-widget-header afterbox"><textarea class=" ui-widget-header inputbox" placeholder="Die ausgenommenen Forellen gründlich" id="nexttable"></textarea><i class="material-icons clear" onclick="remove_tr(this)">clear</i></td><td class="ui-widget-header char_data">0/1000</td></tr>';
+  $('#'+tableId).append(db);
+
+}
+
+function remove_tr(This) {
+    if(This.closest('tbody').childElementCount == 1)
+    {
+      //alert("can not remove")
+    }else{
+        This.closest('tr').remove();
+    }
+}
+
+ $( function() {
+    $( "#resizable" ).resizable();
+  } );
+function resizes(This) {
+
+      $(This).resizable();
+
+    }
+
+    $(function () {
+     
+      $(document.querySelectorAll('.ui-widget-content')).resizable();
+    });
+  </script>
+
+    </body>
+  </html>
