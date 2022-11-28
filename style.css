@@ -248,7 +248,7 @@ table {
   padding-right: 10px;
   text-align: end;
   position: relative;
-  left: -10px;
+ 
 }
 
 .main-content  img {
@@ -276,19 +276,12 @@ td.zutaten-td{
 .side-content {
   width: 36%;
   border: none !important;
-    border-right-color: currentcolor;
-    border-right-style: none;
-    border-right-width: medium;
-    border-left-color: currentcolor;
-    border-left-style: none;
-    border-left-width: medium;
-  border-right: 1px solid #ccc !important;
-  float: right;
-  background: #FFFBF2;
-  border-left: 1px solid #ccc !important;
-  background: #FFFBF2;
-  position: relative;
-  left: -1px;
+      border-right: 1px solid #ccc !important;
+      float: right;
+      border-left: 1px solid #ccc !important;
+      background: #FFFBF2;
+      position: relative;
+      left: -1px;
 }
 .side-content tr td {
   font-size: 10px;
@@ -326,6 +319,9 @@ textarea.ui-widget-header.inputbox {
     padding: 0 !important;
     right: 0px;
     height: 10px !important;
+    background: transparent !important;
+}
+.char_data span{
     background: transparent !important;
 }
 /****************LAst section**********************/
@@ -421,5 +417,56 @@ z-index: 1 !important;
 
 }
 tr.ui-state-default.ui-sortable-handle:active{
-     background: #b3b3b3;
+     background: #d9d9d9;
+}
+/***********************popup********************************/
+.show{
+    width: 250px;
+    height: auto;
+    background: linear-gradient(180deg, #fff 60%, #FFFBF2 60%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    position: absolute;
+    top: 64px;
+    padding: 12px 12px 8px 12px;
+    z-index: 999;
+    display: block !important;
+    min-width: auto !important;
+    left: 387px; 
+}
+
+.show h2 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin-bottom: 7px;
+}
+.show h3 {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+.show p {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin-bottom: 2px;
+}
+.show input.Produktionsmenge_input {
+    width: 41px !important;
+    height: 14px !important;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    background: #fff;
+    margin-right: 8px !important;
+    padding: 5px 8px !important;
+    font-size: 14px !important;
+    line-height: 14px !important;
+    margin-bottom: 0 !important;
+}
+.ui-state-default {
+    background-color: #fff;
 }
