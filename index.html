@@ -53,12 +53,12 @@
 
               <p class="detail-td">
                 <span>Haltbarkeit:</span>
-                <span><input class="inputdate" type="text" id="datepicker" ></span>
+                <span><input class="inputdate txtDate" type="text" id="datepicker"></span>
               </p>
 
               <p class="detail-td">
                 <span>Produktionstag:</span>
-                <span><input class="inputdate" type="text" id="datepicker2"></span>
+                <span><input class="inputdate txtDate" type="text" id="datepicker2"></span>
               </p>
             </div>
        <!-- *********************detail-td************************** -->
@@ -141,7 +141,7 @@
 
               <table class="side-content">
                 <tbody id="tbody">
-                  <tr id="resizable" class="ui-widget-content resizes" onmouseenter="resizes(this)" style="height:64.3333px;">
+                  <tr id="resizable" class="ui-widget-content resizes" onmouseenter="resizes(this)" style="height:64.3333px; background: #fffbf2 !important;">
                     <td class="ui-widget-header afterbox">
                          <textarea class=" ui-widget-header inputbox" placeholder="Die ausgenommenen Forellen gründlich"></textarea>
                          <i class="material-icons clear" onclick="remove_tr(this)">clear</i>
@@ -205,7 +205,7 @@
 
 function create_tr(tableId){
 
-  let db = '<tr id="resizable" class="ui-widget-content resizes" onmouseenter="resizes(this)" style="height:64.3333px;" ><td class="ui-widget-header afterbox"><textarea class=" ui-widget-header inputbox" placeholder="Die ausgenommenen Forellen gründlich" id="nexttable"></textarea><i class="material-icons clear" onclick="remove_tr(this)">clear</i></td><td class="ui-widget-header char_data">0/1000</td></tr>';
+  let db = '<tr id="resizable" class="ui-widget-content resizes" onmouseenter="resizes(this)"><td class="ui-widget-header afterbox"><textarea class=" ui-widget-header inputbox" placeholder="Die ausgenommenen Forellen gründlich" id="nexttable"></textarea><i class="material-icons clear" onclick="remove_tr(this)">clear</i></td><td class="ui-widget-header char_data">0/1000</td></tr>';
   $('#'+tableId).append(db);
 
 }
@@ -257,6 +257,11 @@ $(document).ready(function(){
   });
 });
 
+
+$(document).ready(function() {
+    $('.txtDate').datepicker();
+    $('.txtDate').datepicker('setDate', 'today');
+});
   </script>
 
     </body>
